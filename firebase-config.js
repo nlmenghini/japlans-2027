@@ -4,11 +4,12 @@
 // "Your apps" → SDK setup and configuration → Config
 // ---------------------------------------------------------------------
 window.FIREBASE_CONFIG = {
-  apiKey: "PASTE_YOUR_API_KEY",
-  authDomain: "PASTE_YOUR_PROJECT.firebaseapp.com",
-  databaseURL: "https://PASTE_YOUR_PROJECT-default-rtdb.firebaseio.com",
-  projectId: "PASTE_YOUR_PROJECT",
-  storageBucket: "PASTE_YOUR_PROJECT.appspot.com",
-  messagingSenderId: "PASTE_YOUR_SENDER_ID",
-  appId: "PASTE_YOUR_APP_ID"
+  apiKey: "AIzaSyB7TxXTx4SpQhfSwSv7BcbLVRu6d4Zuzjw",
+  authDomain: "japlans-2027.firebaseapp.com",
+  databaseURL: "https://japlans-2027-default-rtdb.firebaseio.com",
+  projectId: "japlans-2027",
+  storageBucket: "japlans-2027.firebasestorage.app",
+  messagingSenderId: "636493972936",
+  appId: "1:636493972936:web:caec469285f21333752cfd",
+  measurementId: "G-37M6W8RKMJ"
 };
