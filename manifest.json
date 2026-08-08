@@ -1,6 +1,6 @@
 {
   "name": "Tokyo \u27f7 Kyoto Trip",
-  "short_name": "TYO\u27f7KYO",
+  "short_name": "Japlans",
   "description": "Party itinerary and day trip voting for the Jan 20 \u2013 Feb 2 trip",
   "start_url": "./index.html",
   "scope": "./",
