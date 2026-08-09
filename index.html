@@ -469,6 +469,235 @@
       font-size: 10.5px;
       font-family: 'JetBrains Mono', monospace;
     }
+
+    .ticket-main {
+      cursor: pointer;
+    }
+
+    .ticket-main:active {
+      background: var(--paper-dim);
+    }
+
+    .ticket-more {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: .04em;
+      color: var(--brass);
+      margin-top: 10px;
+      text-transform: uppercase;
+    }
+
+    .detail-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(21, 34, 56, .55);
+      z-index: 80;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .22s ease;
+    }
+
+    .detail-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .detail-sheet {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 6vh;
+      max-width: 560px;
+      margin: 0 auto;
+      background: var(--paper);
+      border-radius: 20px 20px 0 0;
+      z-index: 90;
+      transform: translateY(100%);
+      transition: transform .3s cubic-bezier(.2, .8, .2, 1);
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 -10px 40px rgba(0, 0, 0, .3);
+      overflow: hidden;
+    }
+
+    .detail-sheet.open {
+      transform: translateY(0);
+    }
+
+    .detail-head {
+      background: var(--ink);
+      color: var(--paper);
+      padding: calc(16px + var(--safe-t)) 52px 16px 20px;
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .detail-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid #3a4d6d;
+      background: #1c2c48;
+      color: var(--paper);
+      font-size: 15px;
+      line-height: 1;
+    }
+
+    .detail-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--brass);
+    }
+
+    .detail-dest {
+      font-size: 26px;
+      font-weight: 800;
+      font-family: 'Shippori Mincho', serif;
+      margin-top: 4px;
+    }
+
+    .detail-pace-badge {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 10px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      letter-spacing: .05em;
+      padding: 4px 10px;
+      border-radius: 12px;
+      border: 1px solid var(--brass);
+      color: var(--brass);
+    }
+
+    .detail-body {
+      overflow-y: auto;
+      flex: 1;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 24px;
+    }
+
+    .detail-section {
+      padding: 18px 20px 4px;
+    }
+
+    .detail-section+.detail-section {
+      border-top: 1px dashed #ddd2b8;
+      margin-top: 14px;
+      padding-top: 18px;
+    }
+
+    .detail-h {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--brass);
+    }
+
+    .travel-options {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .travel-opt {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      background: var(--paper-dim);
+      border-radius: 8px;
+      padding: 10px 12px;
+      border: 1px solid transparent;
+    }
+
+    .travel-opt.fastest {
+      border-color: var(--vermillion);
+      background: #fff;
+    }
+
+    .travel-opt-method {
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .fastest-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      color: var(--vermillion);
+      letter-spacing: .04em;
+      margin-left: 6px;
+    }
+
+    .travel-opt-meta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: #5b5346;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .travel-cost-row {
+      margin-top: 10px;
+      font-size: 12.5px;
+      color: #5b5346;
+      line-height: 1.5;
+    }
+
+    .map-frame {
+      width: 100%;
+      aspect-ratio: 16 / 11;
+      border: 0;
+      border-radius: 10px;
+      margin-top: 10px;
+      background: var(--paper-dim);
+    }
+
+    .highlight-list {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: var(--sumi);
+    }
+
+    .gems-label {
+      margin-top: 14px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--brass);
+    }
+
+    .food-text {
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: var(--sumi);
+      margin-top: 8px;
+    }
+
+    .gf-note {
+      margin-top: 12px;
+      background: var(--paper-dim);
+      border-left: 3px solid var(--good);
+      padding: 10px 12px;
+      border-radius: 6px;
+      font-size: 12.5px;
+      line-height: 1.55;
+      color: var(--sumi);
+    }
+
+    .gf-note b {
+      color: var(--good);
+    }
   </style>
 </head>
 
@@ -494,7 +723,7 @@
       <div class="timeline">
         <div class="tl-item">
           <div class="tl-dot"></div>
-          <div class="tl-date">TUE JAN 20 · 7:15 PM</div>
+          <div class="tl-date">WED JAN 20 · 7:15 PM</div>
           <div class="tl-title">Arrive HND</div>
         </div>
         <div class="tl-item">
@@ -565,6 +794,11 @@
     </button>
   </div>
 
+  <div class="detail-backdrop" id="detailBackdrop"></div>
+  <div class="detail-sheet" id="detailSheet">
+    <div id="detailSheetInner"></div>
+  </div>
+
   <!-- Firebase (compat build — simplest to wire up without a bundler) -->
   <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-database-compat.js"></script>
@@ -572,21 +806,321 @@
 
   <script>
     const TRIPS = [
-      { id: 'nara', group: 'kyoto', dest: 'Nara', time: '45 min train', desc: "Todai-ji's giant Buddha and the bowing deer of Nara Park. Easy half-day, pairs well with Osaka." },
-      { id: 'osaka', group: 'kyoto', dest: 'Osaka', time: '15–45 min', desc: 'Osaka Castle, Dotonbori street food, big city energy. Great with Nara same day.' },
-      { id: 'himeji', group: 'kyoto', dest: 'Himeji', time: '~1 hr shinkansen', desc: "Japan's most spectacular original castle — striking with a dusting of winter snow." },
-      { id: 'uji', group: 'kyoto', dest: 'Uji', time: '~20 min train', desc: 'Byodo-in Temple (the one on the 10-yen coin) and some of the best matcha in Japan.' },
-      { id: 'kobe', group: 'kyoto', dest: 'Kobe', time: '~1 hr', desc: 'Kobe beef, Chinatown, Mt. Rokko views. Good harbor-city change of pace.' },
-      { id: 'amanohashidate', group: 'kyoto', dest: 'Amanohashidate', time: '~2 hrs', desc: 'One of Japan\'s "three scenic views" — a pine-covered sandbar. Best with a full day.' },
-      { id: 'hikone', group: 'kyoto', dest: 'Hikone', time: '~1 hr', desc: 'A lesser-visited original castle on Lake Biwa — good for skipping crowds.' },
-      { id: 'kanazawa', group: 'kyoto', dest: 'Kanazawa', time: '~2 hrs each way', desc: 'Mini-Kyoto: geisha district, samurai quarter, Kenroku-en garden with snow-tied pines. Full day, best on its own.' },
-      { id: 'okayama', group: 'kyoto', dest: 'Okayama', time: '~1 hr direct Nozomi', desc: 'Korakuen Garden and Okayama Castle. Route passes Himeji and Kurashiki — easy to combine.' },
-      { id: 'nikko', group: 'tokyo', dest: 'Nikko', time: '~2 hrs train', desc: 'Ornate mountain shrines, including Toshogu. Atmospheric with winter snow — save for the calmer second Tokyo stint.' },
-      { id: 'hakone', group: 'tokyo', dest: 'Hakone', time: '~1.5–2 hrs', desc: 'Hot springs, Mt. Fuji views, Lake Ashi cruise, the Open-Air Museum. Weather-dependent — good to have buffer.' },
-      { id: 'kamakura', group: 'tokyo', dest: 'Kamakura', time: '~1 hr', desc: 'Great Buddha, quiet temples, laid-back beach town. Easy, low-effort day.' },
-      { id: 'yokohama', group: 'tokyo', dest: 'Yokohama', time: '~30 min', desc: "Japan's 2nd-largest city — big Chinatown, Minato Mirai waterfront. Quick urban change of scene." },
-      { id: 'kawagoe', group: 'tokyo', dest: 'Kawagoe', time: '~1 hr', desc: '"Little Edo" — preserved Edo-period warehouse streets, without going far.' },
-      { id: 'takao', group: 'tokyo', dest: 'Mt. Takao', time: '~1 hr', desc: 'Easy-to-moderate hiking with good views — nature and light exercise mixed in.' },
+      {
+        id: 'nara', group: 'kyoto', dest: 'Nara', time: '45 min train', desc: "Todai-ji's giant Buddha and the bowing deer of Nara Park. Easy half-day, pairs well with Osaka.",
+        travel: {
+          options: [
+            { method: 'JR Nara Line "Miyakoji" Rapid', duration: '45 min', cost: '¥720', fastest: true },
+            { method: 'Kintetsu Limited Express (reserved)', duration: '~40 min', cost: '¥1,280' },
+          ],
+          roundTrip: '~¥1,440',
+          pace: 'leisurely',
+          paceNote: "Frequent trains — easy to sleep in and still have a full afternoon. If you're here Jan 23, the Wakakusa Yamayaki grass-burning festival lights up the hillside.",
+        },
+        mapTo: 'Todaiji Temple, Nara, Japan',
+        highlights: {
+          main: ['Todaiji Temple — the Great Buddha Hall', "Nara Park's free-roaming deer", 'Kasugataisha Shrine, lined with stone and bronze lanterns', "Kofukuji's five-story pagoda"],
+          gems: ['Naramachi, the old merchant quarter', 'Yoshikien Garden — often free, quieter than neighboring Isuien'],
+        },
+        food: {
+          known: 'Kakinoha-zushi (persimmon-leaf-wrapped sushi), nara-zuke pickles, and chagayu tea rice porridge.',
+          gf: 'Vinegared sushi rice is naturally GF, but the fish marinade is usually soy-based. Nara-zuke is generally low-risk — check for added seasonings. Plain grilled items and fresh fruit are the safest fallback.',
+        },
+      },
+      {
+        id: 'osaka', group: 'kyoto', dest: 'Osaka', time: '15–45 min', desc: 'Osaka Castle, Dotonbori street food, big city energy. Great with Nara same day.',
+        travel: {
+          options: [
+            { method: 'JR Special Rapid (Kyoto Line)', duration: '28 min', cost: '¥580', fastest: true },
+            { method: 'Hankyu Kyoto Line Limited Express', duration: '~40 min', cost: '~¥400' },
+          ],
+          roundTrip: '~¥1,160',
+          pace: 'leisurely',
+          paceNote: 'Under 30 minutes each way — a late start works fine.',
+        },
+        mapTo: 'Osaka Castle, Osaka, Japan',
+        highlights: {
+          main: ['Osaka Castle', 'Dotonbori & Shinsaibashi', 'Umeda Sky Building', 'Kuromon Ichiba Market'],
+          gems: ['Nakazakicho, a retro café district', "Shitenno-ji Temple — older than Kyoto's temples, low crowds"],
+        },
+        food: {
+          known: '"Kuidaore" (eat until you drop) city — takoyaki, okonomiyaki, kushikatsu fried skewers, and Osaka-style pressed sushi (battera).',
+          gf: 'The hardest stop on this list for GF — takoyaki and okonomiyaki batter and kushikatsu breading are all wheat-based. Sashimi at Kuromon Market or yakiniku (ask for salt-only, no sauce) are the realistic safe options.',
+        },
+      },
+      {
+        id: 'himeji', group: 'kyoto', dest: 'Himeji', time: '~1 hr shinkansen', desc: "Japan's most spectacular original castle — striking with a dusting of winter snow.",
+        travel: {
+          options: [
+            { method: 'Shinkansen (Nozomi/Hikari)', duration: '~47 min', cost: '~¥4,700', fastest: true },
+            { method: 'JR Special Rapid, direct via Kobe Line', duration: '~100 min', cost: '¥2,310' },
+          ],
+          roundTrip: '~¥9,400 (Shinkansen) or ~¥4,620 (Special Rapid)',
+          pace: 'moderate',
+          paceNote: 'Full day by Special Rapid; comfortably doable mid-morning if you take the Shinkansen.',
+        },
+        mapTo: 'Himeji Castle, Himeji, Japan',
+        highlights: {
+          main: ["Himeji Castle — Japan's most famous original castle, UNESCO-listed", 'Koko-en Garden next door'],
+          gems: ['Shoshazan Engyoji Temple, a mountain temple by ropeway (a Last Samurai filming location)', 'The Otemae-dori approach to the castle at golden hour'],
+        },
+        food: {
+          known: 'Anago (conger eel), Himeji oden with a ginger-soy dip, and local Harima-region sake.',
+          gf: 'Both anago and oden lean on soy-based sauces — ask for plain grilled anago without sauce if you can. Options thin out fast near the station.',
+        },
+      },
+      {
+        id: 'uji', group: 'kyoto', dest: 'Uji', time: '~20 min train', desc: 'Byodo-in Temple (the one on the 10-yen coin) and some of the best matcha in Japan.',
+        travel: {
+          options: [
+            { method: 'JR Nara Line Rapid', duration: '20 min', cost: '¥240', fastest: true },
+            { method: 'Keihan Uji Line (via transfer)', duration: '~35 min', cost: '~¥310' },
+          ],
+          roundTrip: '~¥480',
+          pace: 'leisurely',
+          paceNote: 'The shortest trip on the list — an easy half-day.',
+        },
+        mapTo: 'Byodo-in Temple, Uji, Japan',
+        highlights: {
+          main: ['Byodo-in Temple — the Phoenix Hall on the ¥10 coin', "Ujigami Shrine, Japan's oldest surviving Shinto shrine building", 'A riverside walk along the Uji-gawa'],
+          gems: ["Kosho-ji Temple's quiet maple-lined stone stairway", 'Small family-run matcha shops off the main street'],
+        },
+        food: {
+          known: "Japan's most famous matcha-growing region — matcha soft serve, matcha sweets, matcha kaiseki at old tea houses, plus river-caught unagi.",
+          gf: 'One of the easier stops for GF — plain matcha soft serve and lattes are naturally GF by default. Matcha sweets like dorayaki often contain wheat, and unagi sauce is soy-based, so ask specifically.',
+        },
+      },
+      {
+        id: 'kobe', group: 'kyoto', dest: 'Kobe', time: '~1 hr', desc: 'Kobe beef, Chinatown, Mt. Rokko views. Good harbor-city change of pace.',
+        travel: {
+          options: [
+            { method: 'JR Special Rapid (direct to Sannomiya)', duration: '51 min', cost: '¥1,110', fastest: true },
+            { method: 'Hankyu (via Juso transfer)', duration: '~65 min', cost: '¥640' },
+          ],
+          roundTrip: '~¥2,220',
+          pace: 'leisurely',
+          paceNote: 'Under an hour each way either direction.',
+        },
+        mapTo: 'Kobe Sannomiya Station, Kobe, Japan',
+        highlights: {
+          main: ['Kitano ijinkan — the old foreign residences district', 'Nankinmachi Chinatown', 'Kobe Harborland & Meriken Park', 'A proper Kobe beef dinner'],
+          gems: ['Sorakuen Garden', 'Nada district sake breweries — Hakutsuru, Sakura Masamune — with free tastings', 'Nunobiki Herb Garden ropeway'],
+        },
+        food: {
+          known: 'Kobe beef (certified, pricey — expect ¥8,000–20,000+ for a proper teppanyaki meal), Nada-brewed sake, and Nankinmachi pork buns.',
+          gf: 'Kobe beef teppanyaki is genuinely GF-friendly if you request salt-only seasoning instead of soy or ponzu; sake is rice-based and generally safe. Skip the wheat-wrapped Chinatown buns and dumplings.',
+        },
+      },
+      {
+        id: 'amanohashidate', group: 'kyoto', dest: 'Amanohashidate', time: '~2 hrs', desc: 'One of Japan\'s "three scenic views" — a pine-covered sandbar. Best with a full day.',
+        travel: {
+          options: [
+            { method: 'Limited Express "Hashidate" (direct, reserved)', duration: '~2 hrs', cost: '~¥5,360', fastest: true },
+            { method: 'Local JR + Kyoto Tango Railway transfer', duration: '~2.5–3 hrs', cost: '~¥3,500' },
+          ],
+          roundTrip: '~¥10,700',
+          pace: 'early',
+          paceNote: 'The most remote trip on the list — only 4–5 direct trains a day, so plan around the timetable and expect to leave before 8am. Confirm the last train back before you go.',
+        },
+        mapTo: 'Amanohashidate View Land, Miyazu, Japan',
+        highlights: {
+          main: ['The pine-covered sandbar itself, viewed upside-down ("matanozoki") from Kasamatsu Park', 'Walking or biking across the sandbar', 'A bay boat cruise', 'Chionji Temple'],
+          gems: ['Nariaiji Temple in the hills above — fewer tourists, panoramic views', "Ine Bay's boathouse village (further by bus/taxi, worth it)"],
+        },
+        food: {
+          known: 'Winter is peak Tango crab (kani) season — the main reason to prioritize this trip in this exact window — plus fresh sashimi and grilled fish.',
+          gf: "Crab and grilled fish are naturally GF, but ponzu/soy dips and tempura-battered crab are not. For kani-nabe hot pot, ask for a kombu-and-salt broth instead of soy-based — one of the better GF destinations if you're willing to be specific.",
+        },
+      },
+      {
+        id: 'hikone', group: 'kyoto', dest: 'Hikone', time: '~1 hr', desc: 'A lesser-visited original castle on Lake Biwa — good for skipping crowds.',
+        travel: {
+          options: [
+            { method: 'JR Special Rapid (Biwako Line, direct)', duration: '50 min', cost: '¥1,170', fastest: true },
+            { method: 'Limited Express (select schedules)', duration: '~40–45 min', cost: 'similar fare' },
+          ],
+          roundTrip: '~¥2,340',
+          pace: 'leisurely',
+          paceNote: 'Under an hour each way, compact town — easy to see on foot.',
+        },
+        mapTo: 'Hikone Castle, Hikone, Japan',
+        highlights: {
+          main: ['Hikone Castle — one of only five original, never-rebuilt castle towers in Japan', 'Genkyuen Garden at its base', 'Lakeside Lake Biwa views'],
+          gems: ['Yume Kyobashi Castle Road, an Edo-era streetscape with low crowds', "Ryotanji Temple's raked-gravel gardens"],
+        },
+        food: {
+          known: "Omi beef (one of Japan's original 'big three' wagyu, alongside Kobe and Matsusaka) and Lake Biwa specialties like funa-zushi, a fermented crucian carp delicacy.",
+          gf: "Omi beef steak/teppanyaki can be made GF with a salt-only request. Funa-zushi's fermentation base varies by shop — ask. Standard soy/dashi caveats apply to everything else.",
+        },
+      },
+      {
+        id: 'kanazawa', group: 'kyoto', dest: 'Kanazawa', time: '~2 hrs each way', desc: 'Mini-Kyoto: geisha district, samurai quarter, Kenroku-en garden with snow-tied pines. Full day, best on its own.',
+        travel: {
+          options: [
+            { method: 'Thunderbird (Kyoto→Tsuruga) + Hokuriku Shinkansen', duration: '~2h 05m', cost: '¥7,720', fastest: true },
+            { method: 'Direct highway bus', duration: '~4 hrs', cost: '~¥4,000–4,500' },
+          ],
+          roundTrip: '~¥15,400 (train)',
+          pace: 'early',
+          paceNote: 'The longest, most demanding trip on the list — 4+ hours round-trip transit. Leave Kyoto by 7:30–8am to make it worthwhile.',
+        },
+        mapTo: 'Kenrokuen Garden, Kanazawa, Japan',
+        highlights: {
+          main: ["Kenrokuen Garden — one of Japan's 'three great gardens,' striking in winter with snow-guard pine ropes (yukizuri)", 'Kanazawa Castle Park', 'Higashi Chaya geisha district', 'Omicho Market'],
+          gems: ['Nagamachi samurai district', 'Nishi Chaya — the smaller, far-less-touristed geisha district', "Oyama Shrine's unusual Dutch-glass gate"],
+        },
+        food: {
+          known: "Winter Sea-of-Japan crab, kaisendon seafood rice bowls at Omicho Market, and gold-leaf-topped soft serve — Kanazawa is Japan's gold-leaf capital.",
+          gf: 'Sashimi-based kaisendon (minus the soy dip, or with your own tamari) is one of the more naturally GF-friendly meals in Japan, and the gold-leaf soft serve is typically GF too. Avoid tempura and battered seafood at the market stalls.',
+        },
+      },
+      {
+        id: 'okayama', group: 'kyoto', dest: 'Okayama', time: '~1 hr direct Nozomi', desc: 'Korakuen Garden and Okayama Castle. Route passes Himeji and Kurashiki — easy to combine.',
+        travel: {
+          options: [
+            { method: 'Shinkansen Nozomi', duration: '~50 min', cost: '~¥6,930', fastest: true },
+            { method: 'Shinkansen Hikari', duration: '~65–75 min', cost: 'similar fare' },
+          ],
+          roundTrip: '~¥13,900',
+          pace: 'moderate',
+          paceNote: 'Fast access allows a later start, but most people pair it with Kurashiki (20 min further), which stretches the day.',
+        },
+        mapTo: 'Okayama Korakuen, Okayama, Japan',
+        highlights: {
+          main: ["Okayama Korakuen — one of Japan's 'three great gardens'", 'Okayama Castle, the black-walled "Crow Castle" across the river', "Kurashiki Bikan Historical Quarter's canal townscape"],
+          gems: ["Kibitsu Shrine's long covered wooden corridor, tied to the Momotaro legend", 'The small Okayama Orient Museum', "Kurashiki's quieter northern canal stretch"],
+        },
+        food: {
+          known: 'Barazushi (colorful scattered sushi piled with local seafood and vegetables) — Okayama also calls itself the "Kingdom of Fruit," though peak peach/muscat season is summer, not winter.',
+          gf: "Barazushi's vinegared rice is naturally GF but the toppings are usually soy-seasoned. In winter, fresh citrus and strawberries from local fruit stands are a reliable safe snack.",
+        },
+      },
+      {
+        id: 'nikko', group: 'tokyo', dest: 'Nikko', time: '~2 hrs train', desc: 'Ornate mountain shrines, including Toshogu. Atmospheric with winter snow — save for the calmer second Tokyo stint.',
+        travel: {
+          options: [
+            { method: 'Tobu Limited Express (Spacia)', duration: '1h 50m', cost: '¥2,850–3,540', fastest: true },
+            { method: 'Nikko World Heritage Pass (local)', duration: '~2h 10m', cost: '¥3,000 incl. shrine entry' },
+          ],
+          roundTrip: '¥5,700–7,000 (or ~¥3,000 with the Heritage Pass)',
+          pace: 'early',
+          paceNote: 'From Asakusa, not Tokyo Station — the shrine complex is spread out, so leave early. Toshogu closes at 16:00 in winter.',
+        },
+        mapTo: 'Toshogu Shrine, Nikko, Japan',
+        highlights: {
+          main: ['Toshogu Shrine — Yomeimon Gate, sleeping cat carving, three wise monkeys', 'Shinkyo Bridge', 'Rinnoji Temple', 'Lake Chuzenji & Kegon Falls (50 min further by bus)'],
+          gems: ['Takino-o Shrine forest path behind Toshogu', 'Ganman-ga-fuchi Abyss — mossy Jizo statues along the river'],
+        },
+        food: {
+          known: 'Nikko is a yuba (tofu skin) town — yuba manju, yuba soba, full yuba kaiseki — plus mountain soba and yamame trout.',
+          gf: 'Plain yuba is naturally gluten-free, but dipping sauces are soy-based. Soba here is wheat-blended unless labeled "juwari" (100% buckwheat) — ask.',
+        },
+      },
+      {
+        id: 'hakone', group: 'tokyo', dest: 'Hakone', time: '~1.5–2 hrs', desc: 'Hot springs, Mt. Fuji views, Lake Ashi cruise, the Open-Air Museum. Weather-dependent — good to have buffer.',
+        travel: {
+          options: [
+            { method: 'Shinkansen (Tokyo Sta. → Odawara) + Tozan Line', duration: '~50 min', cost: '¥3,280+', fastest: true },
+            { method: 'Odakyu Romancecar (Shinjuku, direct)', duration: '~85 min', cost: '¥2,470' },
+          ],
+          roundTrip: 'Hakone Free Pass, ¥6,100–7,100 (covers trains, buses, ropeway, cruise)',
+          pace: 'early',
+          paceNote: 'Ropeway + lake cruise + shrine in one day means an early train out. The ropeway can pause for wind or gas alerts — buses sub in when it does.',
+        },
+        mapTo: 'Hakone-Yumoto Station, Hakone, Japan',
+        highlights: {
+          main: ['Hakone Ropeway to Owakudani — volcanic valley, black eggs, Fuji views', 'Lake Ashi pirate-ship cruise', "Hakone Shrine's floating torii", 'Hakone Open-Air Museum'],
+          gems: ['Amazake-chaya — historic teahouse on the old Tokaido road', 'Narukawa Art Museum, lake views without the crowds'],
+        },
+        food: {
+          known: "Kuro-tamago (black eggs), boiled in Owakudani's sulfuric springs and said to add years to your life, are the signature. Also onsen kaiseki and local wagyu.",
+          gf: 'Black eggs (just eggs + sulfur water) are naturally GF. Nearly everything else — soba, kaiseki courses with soy-based sauces — is hard to control for gluten on a day trip.',
+        },
+      },
+      {
+        id: 'kamakura', group: 'tokyo', dest: 'Kamakura', time: '~1 hr', desc: 'Great Buddha, quiet temples, laid-back beach town. Easy, low-effort day.',
+        travel: {
+          options: [
+            { method: 'JR Yokosuka Line (Tokyo Sta., direct)', duration: '~55–60 min', cost: '¥1,040', fastest: true },
+            { method: 'JR Shonan-Shinjuku Line (from Shinjuku)', duration: '~60–70 min', cost: '¥1,040' },
+          ],
+          roundTrip: '~¥2,080 (+~¥800 for an Enoden day pass)',
+          pace: 'leisurely',
+          paceNote: 'Direct and frequent — easy late-morning start, back well before dinner.',
+        },
+        mapTo: 'Kotoku-in Great Buddha, Kamakura, Japan',
+        highlights: {
+          main: ['Great Buddha at Kotoku-in', 'Hase-dera Temple', 'Komachi-dori shopping street', 'Tsurugaoka Hachimangu Shrine', 'Enoshima Island'],
+          gems: ['Zeniarai Benten — cave shrine where visitors wash money for luck', "Hokokuji Temple's bamboo grove, a quieter Arashiyama"],
+        },
+        food: {
+          known: 'Shirasu (whitebait) is the local specialty — shirasu-don rice bowls, raw or boiled, served all along the beach road.',
+          gf: 'Plain boiled shirasu-don with sauce on the side can work. Shojin ryori (temple vegetarian food) looks safe but leans heavily on soy sauce — confirm ingredients first.',
+        },
+      },
+      {
+        id: 'yokohama', group: 'tokyo', dest: 'Yokohama', time: '~30 min', desc: "Japan's 2nd-largest city — big Chinatown, Minato Mirai waterfront. Quick urban change of scene.",
+        travel: {
+          options: [
+            { method: 'JR Tokaido Line (Tokyo Sta., direct)', duration: '~25–30 min', cost: '¥480', fastest: true },
+            { method: 'Tokyu Toyoko Line (from Shibuya)', duration: '~30 min', cost: '~¥280' },
+          ],
+          roundTrip: '~¥960–1,000',
+          pace: 'leisurely',
+          paceNote: 'The shortest trip of the bunch — a relaxed half-day is plenty.',
+        },
+        mapTo: 'Yokohama Chinatown, Japan',
+        highlights: {
+          main: ['Minato Mirai waterfront — Cosmo Clock 21 Ferris wheel, Landmark Tower', "Japan's largest Chinatown", 'Yamashita Park & the Nippon Maru', 'Cup Noodles Museum'],
+          gems: ["Yamate district's old Western-consulate streets", 'Sankeien Garden — relocated historic buildings, few tourists'],
+        },
+        food: {
+          known: 'Chinatown is the draw — steamed buns, xiaolongbao, and Cantonese/Shanghai set meals. Yokohama is where Japanese-style Chinese food was born.',
+          gf: 'One of the easier GF hunts on this list — look for rice-based dishes specifically. Most sauces and dumpling wrappers still contain wheat, so ask before ordering.',
+        },
+      },
+      {
+        id: 'kawagoe', group: 'tokyo', dest: 'Kawagoe', time: '~1 hr', desc: '"Little Edo" — preserved Edo-period warehouse streets, without going far.',
+        travel: {
+          options: [
+            { method: 'Tobu Tojo Line (from Ikebukuro)', duration: '~27–30 min', cost: '¥490', fastest: true },
+            { method: 'JR via Omiya transfer', duration: '~1 hr', cost: 'similar fare' },
+          ],
+          roundTrip: 'Kawagoe Discount Pass, ¥710',
+          pace: 'leisurely',
+          paceNote: 'Short hop from Ikebukuro (not Tokyo Station) into a compact, walkable old town.',
+        },
+        mapTo: 'Kurazukuri Street, Kawagoe, Japan',
+        highlights: {
+          main: ['Kurazukuri warehouse-style merchant street', 'Toki no Kane bell tower', 'Kashiya Yokocho ("Penny Candy Alley")', 'Kita-in Temple — 500 rakan statues'],
+          gems: ['Renkeiji Temple, quiet and crowd-free', 'Back streets off the main Kurazukuri street for small craft shops'],
+        },
+        food: {
+          known: "Satsumaimo (sweet potato) is Kawagoe's signature — tarts, croquettes, soft serve, chips all along Kashiya Yokocho. Unagi is also a local Edo-era tradition.",
+          gf: "Plain roasted sweet potato (yaki-imo) is naturally GF and sold everywhere — an easy safe snack. Most sweet-potato confections and unadon's glaze are wheat-based.",
+        },
+      },
+      {
+        id: 'takao', group: 'tokyo', dest: 'Mt. Takao', time: '~1 hr', desc: 'Easy-to-moderate hiking with good views — nature and light exercise mixed in.',
+        travel: {
+          options: [
+            { method: 'Keio Line (from Shinjuku, direct)', duration: '~50 min', cost: '¥430', fastest: true },
+            { method: 'Keio "Mt. TAKAO" reserved train', duration: '~43 min', cost: '¥430 + small supplement' },
+          ],
+          roundTrip: '~¥900 train + ~¥1,100 cable car/chairlift RT',
+          pace: 'leisurely',
+          paceNote: 'Closest trip on the list — comfortable even with hiking and the cable car included. Cable car runs shorter winter hours and sunset is early, so plan your descent.',
+        },
+        mapTo: 'Takaosanguchi Station, Hachioji, Japan',
+        highlights: {
+          main: ['Cable car or chairlift to mid-mountain', 'Yakuoin Temple', 'Summit observation deck — clear winter Fuji views', 'Trail 1, an easy paved loop'],
+          gems: ['Trail 6, stream-side and quieter, past Jataki Falls', 'The monkey park and wild plant garden near the cable car base'],
+        },
+        food: {
+          known: 'Tororo soba — grated mountain yam over buckwheat noodles — is the specific local dish, sold at shops near the station and cable car base.',
+          gf: 'A genuinely tough stop for GF: the soba is wheat-blended and the broth is soy-based. The grated yam itself is GF — some shops may serve it alone if asked. Pack a backup snack.',
+        },
+      },
     ];
 
     let myName = localStorage.getItem('trip-voter-name') || '';
@@ -683,12 +1217,13 @@
       const chips = voters.slice(0, 6).map(v => `<span class="chip">${initials(v)}</span>`).join('');
       return `
     <div class="ticket">
-      <div class="ticket-main">
+      <div class="ticket-main" data-id="${trip.id}">
         <div class="ticket-top">
           <div class="ticket-dest">${trip.dest}</div>
           <div class="ticket-time">${trip.time}</div>
         </div>
         <div class="ticket-desc">${trip.desc}</div>
+        <div class="ticket-more">Travel · map · highlights · food →</div>
       </div>
       <div class="perforation"></div>
       <div class="ticket-stub">
@@ -712,9 +1247,90 @@
       tokyoEl.innerHTML = tokyoTrips.map(t => ticketHTML(t, votersFor(t.id))).join('');
 
       document.querySelectorAll('.vote-btn').forEach(btn => {
-        btn.addEventListener('click', () => toggleVote(btn.dataset.id));
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          toggleVote(btn.dataset.id);
+        });
+      });
+      document.querySelectorAll('.ticket-main').forEach(el => {
+        el.addEventListener('click', () => openDetail(el.dataset.id));
       });
     }
+
+    const PACE_LABEL = {
+      leisurely: 'LEISURELY · BACK FOR DINNER',
+      moderate: 'FULL DAY',
+      early: 'EARLY START · FULL DAY',
+    };
+
+    function mapEmbedSrc(origin, dest) {
+      return 'https://maps.google.com/maps?saddr=' + encodeURIComponent(origin) + '&daddr=' + encodeURIComponent(dest) + '&output=embed';
+    }
+
+    function travelOptionsHTML(travel) {
+      return travel.options.map(o => `
+        <div class="travel-opt ${o.fastest ? 'fastest' : ''}">
+          <div class="travel-opt-method">${o.method}${o.fastest ? '<span class="fastest-tag">FASTEST</span>' : ''}</div>
+          <div class="travel-opt-meta">${o.duration}<br>${o.cost}</div>
+        </div>`).join('');
+    }
+
+    function detailHTML(trip) {
+      const origin = trip.group === 'kyoto' ? 'Kyoto Station, Kyoto, Japan' : 'Tokyo Station, Tokyo, Japan';
+      const t = trip.travel;
+      return `
+        <div class="detail-head">
+          <button class="detail-close" id="detailCloseBtn" aria-label="Close">✕</button>
+          <div class="detail-eyebrow">${trip.group === 'kyoto' ? 'FROM KYOTO' : 'FROM TOKYO'} · ${trip.time}</div>
+          <div class="detail-dest">${trip.dest}</div>
+          <div class="detail-pace-badge">${PACE_LABEL[t.pace] || t.pace}</div>
+        </div>
+        <div class="detail-body">
+          <div class="detail-section">
+            <div class="detail-h">Getting There</div>
+            <div class="travel-options">${travelOptionsHTML(t)}</div>
+            <div class="travel-cost-row">Round-trip, per person: <b>${t.roundTrip}</b></div>
+            <div class="travel-cost-row">${t.paceNote}</div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-h">The Route</div>
+            <iframe class="map-frame" loading="lazy" src="${mapEmbedSrc(origin, trip.mapTo)}"></iframe>
+          </div>
+          <div class="detail-section">
+            <div class="detail-h">Highlights</div>
+            <ul class="highlight-list">${trip.highlights.main.map(h => `<li>${h}</li>`).join('')}</ul>
+            <div class="gems-label">Hidden gems</div>
+            <ul class="highlight-list">${trip.highlights.gems.map(h => `<li>${h}</li>`).join('')}</ul>
+          </div>
+          <div class="detail-section">
+            <div class="detail-h">Food &amp; Drink</div>
+            <div class="food-text">${trip.food.known}</div>
+            <div class="gf-note"><b>Gluten-free:</b> ${trip.food.gf}</div>
+          </div>
+        </div>
+      `;
+    }
+
+    function openDetail(tripId) {
+      const trip = TRIPS.find(t => t.id === tripId);
+      if (!trip || !trip.travel) return;
+      document.getElementById('detailSheetInner').innerHTML = detailHTML(trip);
+      document.getElementById('detailCloseBtn').addEventListener('click', closeDetail);
+      document.getElementById('detailBackdrop').classList.add('open');
+      document.getElementById('detailSheet').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeDetail() {
+      document.getElementById('detailBackdrop').classList.remove('open');
+      document.getElementById('detailSheet').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('detailBackdrop').addEventListener('click', closeDetail);
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeDetail();
+    });
 
     function switchView(name) {
       document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));

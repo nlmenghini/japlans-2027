@@ -1,5 +1,5 @@
 // Bump this on every deploy so phones pick up the new shell.
-const CACHE_NAME = 'tyo-kyo-trip-v1';
+const CACHE_NAME = 'tyo-kyo-trip-v2';
 
 const SHELL_FILES = [
   './',
