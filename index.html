@@ -717,6 +717,73 @@
     .gf-note b {
       color: var(--good);
     }
+
+    .weather-temps {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .weather-temp-high {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--vermillion);
+    }
+
+    .weather-temp-low {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--line);
+    }
+
+    .weather-temp-slash {
+      color: #a89a7c;
+      font-size: 16px;
+    }
+
+    .weather-temp-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: #8a8069;
+      margin-left: 4px;
+    }
+
+    .weather-conditions {
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: var(--sumi);
+      margin-top: 8px;
+    }
+
+    .weather-clothing {
+      font-size: 12.5px;
+      line-height: 1.55;
+      color: #5b5346;
+      margin-top: 8px;
+    }
+
+    .weather-caution {
+      margin-top: 12px;
+      background: #3a2418;
+      border: 1px solid var(--vermillion);
+      color: #f2d9d0;
+      font-size: 12.5px;
+      line-height: 1.55;
+      padding: 10px 12px;
+      border-radius: 8px;
+    }
+
+    .weather-disclaimer {
+      font-size: 10.5px;
+      color: #a89a7c;
+      font-family: 'JetBrains Mono', monospace;
+      margin-top: 12px;
+    }
   </style>
 </head>
 
@@ -845,6 +912,13 @@
           known: 'Kakinoha-zushi (persimmon-leaf-wrapped sushi), nara-zuke pickles, and chagayu tea rice porridge.',
           gf: 'Vinegared sushi rice is naturally GF, but the fish marinade is usually soy-based. Nara-zuke is generally low-risk — check for added seasonings. Plain grilled items and fresh fruit are the safest fallback.',
         },
+        weather: {
+          high: '7°C (45°F)',
+          low: '-1°C (30°F)',
+          conditions: 'Nearly identical to Kyoto — dry, crisp, sunny mornings with cold nights, since the Nara Basin radiates heat fast overnight. Occasional light rain or flurries, no meaningful snow accumulation.',
+          clothing: 'Layers plus a light insulated jacket; warm socks and gloves for the cold mornings in Nara Park. Comfortable walking shoes are fine, no special footwear needed.',
+          caution: null,
+        },
       },
       {
         id: 'osaka', group: 'kyoto', dest: 'Osaka', time: '15–45 min', desc: 'Osaka Castle, Dotonbori street food, big city energy. Great with Nara same day.',
@@ -865,6 +939,13 @@
         food: {
           known: '"Kuidaore" (eat until you drop) city — takoyaki, okonomiyaki, kushikatsu fried skewers, and Osaka-style pressed sushi (battera).',
           gf: 'The hardest stop on this list for GF — takoyaki and okonomiyaki batter and kushikatsu breading are all wheat-based. Sashimi at Kuromon Market or yakiniku (ask for salt-only, no sauce) are the realistic safe options.',
+        },
+        weather: {
+          high: '9.5°C (49°F)',
+          low: '3°C (37°F)',
+          conditions: 'The mildest stop on this list, thanks to the urban heat island and coastal position — dry, with only 5–6 rainy days a month, and light snow is rare.',
+          clothing: 'A mid-weight coat is enough; an umbrella is more useful than heavy rain gear on the rare wet day.',
+          caution: null,
         },
       },
       {
@@ -887,6 +968,13 @@
           known: 'Anago (conger eel), Himeji oden with a ginger-soy dip, and local Harima-region sake.',
           gf: 'Both anago and oden lean on soy-based sauces — ask for plain grilled anago without sauce if you can. Options thin out fast near the station.',
         },
+        weather: {
+          high: '7°C (45°F)',
+          low: '2°C (36°F)',
+          conditions: 'Seto Inland Sea coastal climate — the driest of the group, with occasional snow flurries that rarely stick.',
+          clothing: 'Castle grounds are exposed, windy, and full of stone stairs — a windproof outer layer, a warm hat, and grippy flat-soled shoes for icy stone steps on cold mornings.',
+          caution: null,
+        },
       },
       {
         id: 'uji', group: 'kyoto', dest: 'Uji', time: '~20 min train', desc: 'Byodo-in Temple (the one on the 10-yen coin) and some of the best matcha in Japan.',
@@ -907,6 +995,13 @@
         food: {
           known: "Japan's most famous matcha-growing region — matcha soft serve, matcha sweets, matcha kaiseki at old tea houses, plus river-caught unagi.",
           gf: 'One of the easier stops for GF — plain matcha soft serve and lattes are naturally GF by default. Matcha sweets like dorayaki often contain wheat, and unagi sauce is soy-based, so ask specifically.',
+        },
+        weather: {
+          high: '6°C (43°F)',
+          low: '-1°C (30°F)',
+          conditions: "A near-clone of Kyoto's own basin climate (it's immediately south) — dry, cold, clear mornings, minimal accumulation. Notably breezy along the river.",
+          clothing: 'Standard winter layers with warm gloves for river-front walking around Byodo-in; no special footwear needed.',
+          caution: null,
         },
       },
       {
@@ -929,6 +1024,13 @@
           known: 'Kobe beef (certified, pricey — expect ¥8,000–20,000+ for a proper teppanyaki meal), Nada-brewed sake, and Nankinmachi pork buns.',
           gf: 'Kobe beef teppanyaki is genuinely GF-friendly if you request salt-only seasoning instead of soy or ponzu; sake is rice-based and generally safe. Skip the wheat-wrapped Chinatown buns and dumplings.',
         },
+        weather: {
+          high: '8°C (46°F)',
+          low: '3°C (38°F)',
+          conditions: 'Coastal and generally mild, but noticeably windier than Kyoto or Osaka off the harbor, with the most snow-flurry days of the Pacific-side stops (though accumulation is minimal).',
+          clothing: 'A windproof, water-resistant shell beats a bulky coat, especially near the harbor and on the Rokko ropeway if you ride it — bring gloves for the wind chill.',
+          caution: 'If you ride the Rokko cable car/ropeway, temps up top run several degrees colder and windier than the harbor numbers suggest.',
+        },
       },
       {
         id: 'amanohashidate', group: 'kyoto', dest: 'Amanohashidate', time: '~2 hrs', desc: 'One of Japan\'s "three scenic views" — a pine-covered sandbar. Best with a full day.',
@@ -949,6 +1051,13 @@
         food: {
           known: 'Winter is peak Tango crab (kani) season — the main reason to prioritize this trip in this exact window — plus fresh sashimi and grilled fish.',
           gf: "Crab and grilled fish are naturally GF, but ponzu/soy dips and tempura-battered crab are not. For kani-nabe hot pot, ask for a kombu-and-salt broth instead of soy-based — one of the better GF destinations if you're willing to be specific.",
+        },
+        weather: {
+          high: '9°C (48°F)',
+          low: '2°C (36°F)',
+          conditions: "The only Sea of Japan–side stop on this list — temperatures aren't dramatically colder than Kyoto, but skies are far grayer and wetter, with frequent snow squalls and roughly triple Kyoto's winter precipitation.",
+          clothing: 'A real waterproof, windproof shell (an umbrella is useless in the coastal wind), waterproof shoes or boots for the sandbar walk or bike, and hand warmers. The chairlift/ropeway viewpoints are exposed and cold.',
+          caution: 'Expect far more snow and blustery, overcast weather than anywhere else on this list — check the limited express schedule for possible weather delays before committing to an early train.',
         },
       },
       {
@@ -971,6 +1080,13 @@
           known: "Omi beef (one of Japan's original 'big three' wagyu, alongside Kobe and Matsusaka) and Lake Biwa specialties like funa-zushi, a fermented crucian carp delicacy.",
           gf: "Omi beef steak/teppanyaki can be made GF with a salt-only request. Funa-zushi's fermentation base varies by shop — ask. Standard soy/dashi caveats apply to everything else.",
         },
+        weather: {
+          high: '5°C (42°F)',
+          low: '0°C (32°F)',
+          conditions: 'The coldest average of the Kansai-side stops — Hikone sits at the edge of a genuine snowbelt where Sea-of-Japan snow systems funnel through, notorious for surprise heavy snow that can even disrupt Shinkansen service nearby.',
+          clothing: 'Insulated waterproof boots (not just sneakers) and a waterproof outer layer with hand/toe warmers — castle grounds have steep, exposed stone paths that get slick with snow or ice.',
+          caution: 'Meaningfully more snow-prone than Kyoto or Osaka — build in schedule buffer in case of train slowdowns on the Biwako/Tokaido lines if snow hits.',
+        },
       },
       {
         id: 'kanazawa', group: 'kyoto', dest: 'Kanazawa', time: '~2 hrs each way', desc: 'Mini-Kyoto: geisha district, samurai quarter, Kenroku-en garden with snow-tied pines. Full day, best on its own.',
@@ -991,6 +1107,13 @@
         food: {
           known: "Winter Sea-of-Japan crab, kaisendon seafood rice bowls at Omicho Market, and gold-leaf-topped soft serve — Kanazawa is Japan's gold-leaf capital.",
           gf: 'Sashimi-based kaisendon (minus the soy dip, or with your own tamari) is one of the more naturally GF-friendly meals in Japan, and the gold-leaf soft serve is typically GF too. Avoid tempura and battered seafood at the market stalls.',
+        },
+        weather: {
+          high: '7°C (44°F)',
+          low: '1°C (34°F)',
+          conditions: 'By far the most weather-intensive stop on this list — a true Sea of Japan winter climate with roughly two feet of snowfall accumulation typical for January alone, rain or snow on most days, and persistently gray skies.',
+          clothing: "Waterproof insulated boots with real tread (icy, slushy sidewalks are the norm here, not the exception), a waterproof/windproof coat over warm layers, and hand warmers. Micro-spikes are worth packing for Kenrokuen's unswept paths.",
+          caution: "This is the outlier of the whole trip — genuinely heavy, near-daily snow or sleet, icy walkways, and a real if modest risk of train delays on the Kanazawa route in a heavy-snow spell. Keep this day flexible and don't schedule anything time-critical right after.",
         },
       },
       {
@@ -1013,6 +1136,13 @@
           known: 'Barazushi (colorful scattered sushi piled with local seafood and vegetables) — Okayama also calls itself the "Kingdom of Fruit," though peak peach/muscat season is summer, not winter.',
           gf: "Barazushi's vinegared rice is naturally GF but the toppings are usually soy-seasoned. In winter, fresh citrus and strawberries from local fruit stands are a reliable safe snack.",
         },
+        weather: {
+          high: '7°C (45°F)',
+          low: '1°C (34°F)',
+          conditions: 'Known within Japan as one of the sunniest, driest prefectures — the Chugoku mountains block Sea-of-Japan snow systems, so Okayama actually sees less rain and snow than Kyoto itself. Notably windy, though.',
+          clothing: 'A windproof layer matters more than rain gear; otherwise standard winter layers and comfortable shoes are fine for Korakuen Garden and the castle grounds.',
+          caution: null,
+        },
       },
       {
         id: 'nikko', group: 'tokyo', dest: 'Nikko', time: '~2 hrs train', desc: 'Ornate mountain shrines, including Toshogu. Atmospheric with winter snow — save for the calmer second Tokyo stint.',
@@ -1033,6 +1163,13 @@
         food: {
           known: 'Nikko is a yuba (tofu skin) town — yuba manju, yuba soba, full yuba kaiseki — plus mountain soba and yamame trout.',
           gf: 'Plain yuba is naturally gluten-free, but dipping sauces are soy-based. Soba here is wheat-blended unless labeled "juwari" (100% buckwheat) — ask.',
+        },
+        weather: {
+          high: '3°C (37°F)',
+          low: '-4°C (24°F)',
+          conditions: "Cold and often crisp at shrine level, but Nikko is one of the snowier Kanto day trips — around 18–19 snow days in a typical January. Extending to Lake Chuzenji/Okunikko (1,269m) is a full step colder and snowier; the lake is usually frozen by late January.",
+          clothing: 'Real winter layering — insulated coat, thermal base layer, wool socks, waterproof/insulated boots, hat, gloves, hand warmers.',
+          caution: 'Meaningfully colder and snowier than Tokyo. Shrine stone paths can ice over in shade, and Okunikko is a genuine winter-mountain environment even when Tokyo itself is dry.',
         },
       },
       {
@@ -1055,6 +1192,13 @@
           known: "Kuro-tamago (black eggs), boiled in Owakudani's sulfuric springs and said to add years to your life, are the signature. Also onsen kaiseki and local wagyu.",
           gf: 'Black eggs (just eggs + sulfur water) are naturally GF. Nearly everything else — soba, kaiseki courses with soy-based sauces — is hard to control for gluten on a day trip.',
         },
+        weather: {
+          high: '8°C (46°F)',
+          low: '-3°C (27°F)',
+          conditions: "Hakone's driest, coldest month at valley level, with only light snow (~2 days). Higher up near Owakudani, reached by ropeway, wind matters more than temperature — expect it to feel noticeably colder and windier than the valley numbers suggest.",
+          clothing: 'A wind-blocking outer shell matters more than a heavy coat; add a hat and gloves for the ropeway/Owakudani stop. Regular sturdy shoes are fine at valley level.',
+          caution: 'The ropeway can suspend in high winds, and Owakudani sits high and exposed enough that the valley-level numbers understate it — check ropeway status day-of.',
+        },
       },
       {
         id: 'kamakura', group: 'tokyo', dest: 'Kamakura', time: '~1 hr', desc: 'Great Buddha, quiet temples, laid-back beach town. Easy, low-effort day.',
@@ -1075,6 +1219,13 @@
         food: {
           known: 'Shirasu (whitebait) is the local specialty — shirasu-don rice bowls, raw or boiled, served all along the beach road.',
           gf: 'Plain boiled shirasu-don with sauce on the side can work. Shojin ryori (temple vegetarian food) looks safe but leans heavily on soy sauce — confirm ingredients first.',
+        },
+        weather: {
+          high: '9°C (49°F)',
+          low: '4°C (39°F)',
+          conditions: "Coastal and generally dry — January is Kamakura's driest, least humid month — but breezy near the coast and the Great Buddha/beach areas, which can make it feel colder than the number suggests.",
+          clothing: 'Standard winter layers plus a windbreaker for the coast; regular shoes are fine, temple grounds and streets are flat.',
+          caution: null,
         },
       },
       {
@@ -1097,6 +1248,13 @@
           known: 'Chinatown is the draw — steamed buns, xiaolongbao, and Cantonese/Shanghai set meals. Yokohama is where Japanese-style Chinese food was born.',
           gf: 'One of the easier GF hunts on this list — look for rice-based dishes specifically. Most sauces and dumpling wrappers still contain wheat, so ask before ordering.',
         },
+        weather: {
+          high: '9°C (49°F)',
+          low: '4°C (39°F)',
+          conditions: "Coastal and dry — January is the driest, coldest month, with negligible snow chance. Minato Mirai's waterfront can be breezy.",
+          clothing: 'A layered coat and a light scarf or windbreaker for the harbor; regular shoes throughout.',
+          caution: null,
+        },
       },
       {
         id: 'kawagoe', group: 'tokyo', dest: 'Kawagoe', time: '~1 hr', desc: '"Little Edo" — preserved Edo-period warehouse streets, without going far.',
@@ -1118,6 +1276,13 @@
           known: "Satsumaimo (sweet potato) is Kawagoe's signature — tarts, croquettes, soft serve, chips all along Kashiya Yokocho. Unagi is also a local Edo-era tradition.",
           gf: "Plain roasted sweet potato (yaki-imo) is naturally GF and sold everywhere — an easy safe snack. Most sweet-potato confections and unadon's glaze are wheat-based.",
         },
+        weather: {
+          high: '9.5°C (49°F)',
+          low: '1°C (34°F)',
+          conditions: 'Inland, so it lacks the coastal moderation of Kamakura/Yokohama — clear, dry days are common, but mornings run noticeably colder and frostier than central Tokyo.',
+          clothing: 'Gloves and a hat matter more here than at the coastal stops, since an early start can feel bitterly cold before the sun warms things up. A rain shell over a heavy coat, since actual precipitation is unlikely.',
+          caution: null,
+        },
       },
       {
         id: 'takao', group: 'tokyo', dest: 'Mt. Takao', time: '~1 hr', desc: 'Easy-to-moderate hiking with good views — nature and light exercise mixed in.',
@@ -1138,6 +1303,13 @@
         food: {
           known: 'Tororo soba — grated mountain yam over buckwheat noodles — is the specific local dish, sold at shops near the station and cable car base.',
           gf: 'A genuinely tough stop for GF: the soba is wheat-blended and the broth is soy-based. The grated yam itself is GF — some shops may serve it alone if asked. Pack a backup snack.',
+        },
+        weather: {
+          high: '9°C (48°F)',
+          low: '1°C (34°F)',
+          conditions: 'January means clear, dry air here — some of the best long-distance visibility of the year, including Mt. Fuji views. The summit runs several degrees colder than the base and can sit near freezing overnight and in early morning shade, with "shimo-bashira" ice-frost formations appearing on Trail 5.',
+          clothing: 'A fleece or insulated midlayer plus hat and gloves for the summit, and shoes with real tread — sturdy trail shoes rather than smooth-soled sneakers.',
+          caution: 'Shaded or dirt trail sections can ice over even on days when Tokyo itself sees no rain or snow — stick to Trail 1 (paved) or the cable car if you skipped grippy footwear.',
         },
       },
     ];
@@ -1317,6 +1489,21 @@
         </div>`).join('');
     }
 
+    function weatherHTML(weather) {
+      return `
+        <div class="weather-temps">
+          <span class="weather-temp-high">${weather.high}</span>
+          <span class="weather-temp-slash">/</span>
+          <span class="weather-temp-low">${weather.low}</span>
+          <span class="weather-temp-label">avg high / low</span>
+        </div>
+        <div class="weather-conditions">${weather.conditions}</div>
+        <div class="weather-clothing"><b>Wear:</b> ${weather.clothing}</div>
+        ${weather.caution ? `<div class="weather-caution">⚠ ${weather.caution}</div>` : ''}
+        <div class="weather-disclaimer">Historical average for these dates — not a forecast. Check a live forecast closer to departure.</div>
+      `;
+    }
+
     function detailHTML(trip) {
       const origin = trip.group === 'kyoto' ? 'Kyoto Station, Kyoto, Japan' : 'Tokyo Station, Tokyo, Japan';
       const t = trip.travel;
@@ -1333,6 +1520,10 @@
             <div class="travel-options">${travelOptionsHTML(t)}</div>
             <div class="travel-cost-row">Round-trip, per person: <b>${t.roundTrip}</b></div>
             <div class="travel-cost-row">${t.paceNote}</div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-h">Weather</div>
+            ${weatherHTML(trip.weather)}
           </div>
           <div class="detail-section">
             <div class="detail-h">The Route</div>
@@ -1355,7 +1546,7 @@
 
     function openDetail(tripId) {
       const trip = TRIPS.find(t => t.id === tripId);
-      if (!trip || !trip.travel) return;
+      if (!trip || !trip.travel || !trip.weather) return;
       document.getElementById('detailSheetInner').innerHTML = detailHTML(trip);
       document.getElementById('detailCloseBtn').addEventListener('click', closeDetail);
       document.getElementById('detailBackdrop').classList.add('open');
