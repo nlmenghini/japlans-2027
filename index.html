@@ -515,14 +515,18 @@
       z-index: 90;
       transform: translateY(100%);
       transition: transform .3s cubic-bezier(.2, .8, .2, 1);
-      display: flex;
-      flex-direction: column;
       box-shadow: 0 -10px 40px rgba(0, 0, 0, .3);
       overflow: hidden;
     }
 
     .detail-sheet.open {
       transform: translateY(0);
+    }
+
+    #detailSheetInner {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
 
     .detail-head {
